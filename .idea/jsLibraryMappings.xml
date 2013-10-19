@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{bootstrap.js, bootstrap.min.js, ember-data.js, ember.js, handlebars-1.0.0.js, jQuery-2.0.0, localstorage_adapter.js}" />
+    <file url="PROJECT" libraries="{bootstrap.js, bootstrap.min.js, ember-data.js, ember.js, handlebars-1.0.0.js, jQuery, localstorage_adapter.js}" />
   </component>
 </project>
 
