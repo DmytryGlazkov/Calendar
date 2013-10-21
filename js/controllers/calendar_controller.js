@@ -2,22 +2,34 @@
 (function() {
   Calendar.CalendarController = Ember.ObjectController.extend({
     selectedDay: 4,
-    selectedMonth: 10,
+    selectedMonth: 11,
     selectedYear: 2013,
     getDays: (function() {
-      var day, days, daysInMonth, daysInPrevMonth, endDay, i, startDay, _i, _ref;
-      daysInMonth = 32 - new Date(this.get('selectedYear'), this.get('selectedMonth'), this.get('selectedDay'), 32);
-      daysInPrevMonth = 32 - new Date(this.get('selectedYear'), this.get('selectedMonth'), this.get('selectedDay') - 1, 32);
-      startDay = new Date(this.get('selectedYear'), this.get('selectedMonth'), this.get('selectedDay'), 2).getDay();
-      endDay = new Date(this.get('selectedYear'), this.get('selectedMonth'), this.get('selectedDay') + 1, 2).getDay() - 1;
+      var day, days, daysInMonth, daysInPrevMonth, endDay, i, startDay, _i, _j, _k, _ref, _ref1;
+      daysInMonth = 32 - new Date(this.get('selectedYear'), this.get('selectedMonth'), 32).getDate();
+      daysInPrevMonth = 32 - new Date(this.get('selectedYear'), this.get('selectedMonth') - 1, 32).getDate();
+      startDay = new Date(this.get('selectedYear'), this.get('selectedMonth'), 2).getDay();
+      endDay = new Date(this.get('selectedYear'), this.get('selectedMonth') + 1, 1).getDay();
       days = [];
       for (i = _i = _ref = startDay - 1; _ref <= 0 ? _i <= 0 : _i >= 0; i = _ref <= 0 ? ++_i : --_i) {
         day = new Object;
         day.dayClass = 'anotherDay';
-        day.dayNum = 31 - i;
+        day.dayNum = daysInPrevMonth - i;
         days.push(day);
       }
-      return days;
+      for (i = _j = 1; 1 <= daysInMonth ? _j <= daysInMonth : _j >= daysInMonth; i = 1 <= daysInMonth ? ++_j : --_j) {
+        day = new Object;
+        day.dayClass = 'dayOfMonth';
+        day.dayNum = i;
+        days.push(day);
+      }
+      for (i = _k = 1, _ref1 = 6 - endDay; 1 <= _ref1 ? _k <= _ref1 : _k >= _ref1; i = 1 <= _ref1 ? ++_k : --_k) {
+        day = new Object;
+        day.dayClass = 'anotherDay';
+        day.dayNum = i;
+        days.push(day);
+      }
+      return [days.slice(0, 7), days.slice(7, 14), days.slice(14, 21), days.slice(21, 28), days.slice(28, 35)];
     }).property('selectedDay', 'selectedMonth', 'selectedYear')
   });
 
