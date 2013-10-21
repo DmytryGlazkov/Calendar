@@ -1,6 +1,5 @@
-Calendar.Router.map('Calendar', {path: '/'}, ->
-
-)
+Calendar.Router.map ->
+  @resource('Calendar', {path: '/'})
 
 Calendar.CalendarRoute = Ember.Route.extend()
 
