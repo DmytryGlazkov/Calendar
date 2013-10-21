@@ -1,17 +1,28 @@
 Calendar.CalendarController = Ember.ObjectController.extend
-  selectedDay: 4
-  selectedMonth: 11
+  selectedDay: 21
+  selectedMonth: 9
   selectedYear: 2013
 
   getDays: (->
-    daysInMonth = 32 - new Date(@get('selectedYear'), @get('selectedMonth'), 32).getDate()
-    daysInPrevMonth = 32 - new Date(@get('selectedYear'), @get('selectedMonth') - 1, 32).getDate()
 
-    startDay = new Date(@get('selectedYear'), @get('selectedMonth'), 2).getDay()
+    nowDate = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate())
 
-    endDay = new Date(@get('selectedYear'), @get('selectedMonth') + 1, 1).getDay()
+    selectedDate = new Date(@get('selectedYear'), @get('selectedMonth') - 1, @get('selectedDay'))
+
+    daysInMonth = 32 - new Date(@get('selectedYear'), @get('selectedMonth') - 1, 32).getDate()
+    daysInPrevMonth = 32 - new Date(@get('selectedYear'), @get('selectedMonth') - 2, 32).getDate()
+
+    startDay = new Date(@get('selectedYear'), @get('selectedMonth') - 1, 0).getDay()
+
+    endDay = new Date(@get('selectedYear'), @get('selectedMonth'), 0).getDay()
 
     days = []
+
+    day = new Object()
+    day.dayClass = ''
+    day.dayNum = endDay
+  #  days.push(day)
+
 
     for i in [startDay - 1..0]
       day = new Object
@@ -21,11 +32,12 @@ Calendar.CalendarController = Ember.ObjectController.extend
 
     for i in [1..daysInMonth]
       day = new Object
-      day.dayClass = 'dayOfMonth'
+      if selectedDate == nowDate then day.dayClass = 'now'
+      else day.dayClass = 'dayOfMonth'
       day.dayNum = i
       days.push(day)
 
-    for i in [1..6 - endDay]
+    for i in [1..7 - endDay]
       day = new Object
       day.dayClass = 'anotherDay'
       day.dayNum = i
@@ -37,5 +49,6 @@ Calendar.CalendarController = Ember.ObjectController.extend
       days[14..20]
       days[21..27]
       days[28..34]
+      days[35..41] if days.count > 35
     ]
   ).property('selectedDay', 'selectedMonth', 'selectedYear')

@@ -24,7 +24,7 @@
                     {{#each week in controller.getDays}}
                     <tr class="row">
                         {{#each day in week}}
-                            <td>{{day.dayNum}}</td>
+                            <td {{bind-attr class=day.dayClass}}> {{day.dayNum}}</td>
                         {{/each}}
                     </tr>
                     {{/each}}
@@ -42,6 +42,7 @@
 
         <script src="./js/application.js"></script>
         <script src="./js/router.js"></script>
+        <script src="./js/helpers/dateClassExtend.js"></script>
         <script src="./js/controllers/calendar_controller.js"></script>
 
 
