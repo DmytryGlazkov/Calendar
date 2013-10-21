@@ -1,6 +1,6 @@
 Calendar.CalendarController = Ember.ObjectController.extend
-  selectedDay: 22
-  selectedMonth: 10
+  selectedDay: 30
+  selectedMonth: 9
   selectedYear: 2013
 
   currentDay: 21
@@ -27,9 +27,7 @@ Calendar.CalendarController = Ember.ObjectController.extend
     for i in [startDay - 1..0]
       day = new Object
 
-      if new Date(@get('currentYear'), @get('currentMonth') - 2, daysInPrevMonth - i).getDate() == nowDate.getDate()
-      then day.dayClass = 'now'
-      else day.dayClass = 'anotherDay'
+      @checkDate(selectedDate, new Date(@get('currentYear'), @get('currentMonth') - 2, daysInPrevMonth - i), day, 'anotherDay')
 
       day.dayNum = daysInPrevMonth - i
       days.push(day)
@@ -38,13 +36,7 @@ Calendar.CalendarController = Ember.ObjectController.extend
     for i in [1..daysInMonth]
       day = new Object
 
-      if new Date(@get('currentYear'), @get('currentMonth') - 1, i).getDate() == nowDate.getDate()
-      then day.dayClass = 'now'
-      else
-        if new Date(@get('selectedYear'), @get('selectedMonth') - 1, i).getDate() == selectedDate.getDate()
-        then day.dayClass = 'selected'
-        else
-          day.dayClass = 'dayOfMonth'
+      @checkDate(selectedDate, new Date(@get('currentYear'), @get('currentMonth') - 1, i), day, 'dayInMonth')
 
       day.dayNum = i
       days.push(day)
@@ -53,9 +45,7 @@ Calendar.CalendarController = Ember.ObjectController.extend
     for i in [1..7 - endDay]
       day = new Object
 
-      if new Date(@get('currentYear'), @get('currentMonth'), i).getDate() == nowDate.getDate()
-      then day.dayClass = 'now'
-      else day.dayClass = 'anotherDay'
+      @checkDate(selectedDate, new Date(@get('currentYear'), @get('currentMonth'), i), day, 'anotherDay')
 
       day.dayNum = i
       days.push(day)
@@ -70,3 +60,14 @@ Calendar.CalendarController = Ember.ObjectController.extend
     ]
 
   ).property('currentDay', 'currentMonth', 'currentYear')
+
+  checkDate: (selected, current, day, defaultClass) ->
+    now = new Date()
+    nowDate = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+    if current.getTime() == nowDate.getTime()
+    then day.dayClass = 'now'
+    else
+      if current.getTime() == selected.getTime()
+      then day.dayClass = 'selected'
+      else
+        day.dayClass = defaultClass
