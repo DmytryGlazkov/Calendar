@@ -2,7 +2,7 @@
 (function() {
   Calendar.CalendarController = Ember.ObjectController.extend({
     selectedDay: 21,
-    selectedMonth: 9,
+    selectedMonth: 10,
     selectedYear: 2013,
     getDays: (function() {
       var day, days, daysInMonth, daysInPrevMonth, endDay, i, nowDate, selectedDate, startDay, _i, _j, _k, _ref, _ref1;
@@ -38,7 +38,7 @@
         day.dayNum = i;
         days.push(day);
       }
-      return [days.slice(0, 7), days.slice(7, 14), days.slice(14, 21), days.slice(21, 28), days.slice(28, 35), days.count > 35 ? days.slice(35, 42) : void 0];
+      return [days.slice(0, 7), days.slice(7, 14), days.slice(14, 21), days.slice(21, 28), days.slice(28, 35), days.length > 35 ? days.slice(35, +(days.length - 1) + 1 || 9e9) : void 0];
     }).property('selectedDay', 'selectedMonth', 'selectedYear')
   });
 

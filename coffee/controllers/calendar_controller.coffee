@@ -1,6 +1,6 @@
 Calendar.CalendarController = Ember.ObjectController.extend
   selectedDay: 21
-  selectedMonth: 9
+  selectedMonth: 10
   selectedYear: 2013
 
   getDays: (->
@@ -43,12 +43,14 @@ Calendar.CalendarController = Ember.ObjectController.extend
       day.dayNum = i
       days.push(day)
 
+
+
     [
       days[0..6]
       days[7..13]
       days[14..20]
       days[21..27]
       days[28..34]
-      days[35..41] if days.count > 35
+      days[35..days.length-1] if days.length > 35
     ]
   ).property('selectedDay', 'selectedMonth', 'selectedYear')
