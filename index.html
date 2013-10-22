@@ -19,6 +19,7 @@
                 </ul>
             </nav>
 
+
             <div class="table-responsive">
                 <table class="table table-striped table-bordered" align="center">
                     {{controller}}
@@ -27,7 +28,7 @@
                     <tr class="row">
 
                         {{#each day in week}}
-                            <td {{bind-attr class=day.dayClass}} > {{day.dayNum}}</td>
+                            <td {{bind-attr class=day.dayClass}} > {{day.dayNum}} </td>
                         {{/each}}
 
                     </tr>
