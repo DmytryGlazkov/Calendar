@@ -3,8 +3,36 @@ Calendar.DateController = Ember.ObjectController.extend
   currentMonth: new Date().getMonth() + 1
   currentYear: new Date().getFullYear()
 
+  actions:
+    someAction: ->
+      null
+
+    prevYear: ->
+      @set('currentYear', @get('currentYear') - 1)
+      null
+
+    nextYear: ->
+      @set('currentYear', @get('currentYear') + 1)
+      null
+
+    prevMonth: ->
+      @set('currentMonth', @get('currentMonth') - 1)
+      null
+
+    nextMonth: ->
+      @set('currentMonth', @get('currentMonth') + 1)
+      null
+
+    setSelection: (day)->
+      console.log day
+      @set 'selectedYear', @get 'currentYear'
+      @set 'selectedMonth', @get 'currentMonth'
+      @set 'selectedDay', day
+      @transitionToRoute('date', @get('selectedYear'), @get('selectedMonth'), day)
+
+
   getDays: (->
-    console.log @get('currentDay') + '/' + @get 'currentMonth' + '/' + @get 'currentYear'
+    console.log @get('selectedDay') + '/' + @get('selectedMonth') + '/' + @get('selectedYear')
 
     nowDate = new Date()
 
@@ -56,7 +84,7 @@ Calendar.DateController = Ember.ObjectController.extend
       days[35..days.length-1] if days.length > 35
     ]
 
-  ).property('selectedDay', 'selectedMonth', 'selectedYear')
+  ).property('selectedDay', 'selectedMonth', 'selectedYear', 'currentYear', 'currentMonth', 'currentDay')
 
   checkDate: (selected, current, day, defaultClass) ->
     now = new Date()
@@ -68,3 +96,12 @@ Calendar.DateController = Ember.ObjectController.extend
       then day.dayClass = 'selected'
       else
         day.dayClass = defaultClass
+
+  getTodayDate: (->
+    return new Date().toLocaleDateString()
+  )
+
+  getCurrentDate: (->
+    console.log new Date(@get('currentYear'), @get('currentMonth'), @get('currentDay')).toLocaleDateString()
+    return new Date(@get('currentYear'), @get('currentMonth'), @get('currentDay')).toLocaleDateString()
+  ).property('currentYear', 'currentMonth', 'currentDay')

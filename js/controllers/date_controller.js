@@ -4,9 +4,37 @@
     currentDay: new Date().getDate(),
     currentMonth: new Date().getMonth() + 1,
     currentYear: new Date().getFullYear(),
+    actions: {
+      someAction: function() {
+        return null;
+      },
+      prevYear: function() {
+        this.set('currentYear', this.get('currentYear') - 1);
+        return null;
+      },
+      nextYear: function() {
+        this.set('currentYear', this.get('currentYear') + 1);
+        return null;
+      },
+      prevMonth: function() {
+        this.set('currentMonth', this.get('currentMonth') - 1);
+        return null;
+      },
+      nextMonth: function() {
+        this.set('currentMonth', this.get('currentMonth') + 1);
+        return null;
+      },
+      setSelection: function(day) {
+        console.log(day);
+        this.set('selectedYear', this.get('currentYear'));
+        this.set('selectedMonth', this.get('currentMonth'));
+        this.set('selectedDay', day);
+        return this.transitionToRoute('date', this.get('selectedYear'), this.get('selectedMonth'), day);
+      }
+    },
     getDays: (function() {
       var currentDate, day, days, daysInMonth, daysInPrevMonth, endDay, i, nowDate, selectedDate, startDay, _i, _j, _k, _ref, _ref1;
-      console.log(this.get('currentDay') + '/' + this.get('currentMonth' + '/' + this.get('currentYear')));
+      console.log(this.get('selectedDay') + '/' + this.get('selectedMonth') + '/' + this.get('selectedYear'));
       nowDate = new Date();
       currentDate = new Date(this.get('currentYear'), this.get('currentMonth') - 1, this.get('currentDay'));
       selectedDate = new Date(this.get('selectedYear'), this.get('selectedMonth') - 1, this.get('selectedDay'));
@@ -34,7 +62,7 @@
         days.push(day);
       }
       return [days.slice(0, 7), days.slice(7, 14), days.slice(14, 21), days.slice(21, 28), days.slice(28, 35), days.length > 35 ? days.slice(35, +(days.length - 1) + 1 || 9e9) : void 0];
-    }).property('selectedDay', 'selectedMonth', 'selectedYear'),
+    }).property('selectedDay', 'selectedMonth', 'selectedYear', 'currentYear', 'currentMonth', 'currentDay'),
     checkDate: function(selected, current, day, defaultClass) {
       var now, nowDate;
       now = new Date();
@@ -48,7 +76,14 @@
           return day.dayClass = defaultClass;
         }
       }
-    }
+    },
+    getTodayDate: (function() {
+      return new Date().toLocaleDateString();
+    }),
+    getCurrentDate: (function() {
+      console.log(new Date(this.get('currentYear'), this.get('currentMonth'), this.get('currentDay')).toLocaleDateString());
+      return new Date(this.get('currentYear'), this.get('currentMonth'), this.get('currentDay')).toLocaleDateString();
+    }).property('currentYear', 'currentMonth', 'currentDay')
   });
 
 }).call(this);

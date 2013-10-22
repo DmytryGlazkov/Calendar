@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af6d63ec-af51-4b63-bb77-19becc37ea78" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coffee/controllers/date_controller.coffee" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/coffee/controllers/calendar_controller.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/controllers/calendar_controller.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coffee/application.coffee" afterPath="$PROJECT_DIR$/coffee/application.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/application.js" afterPath="$PROJECT_DIR$/js/application.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coffee/helpers/getTodayDate.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap.css" afterPath="$PROJECT_DIR$/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/libs/bootstrap.js" afterPath="$PROJECT_DIR$/js/libs/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/libs/bootstrap.min.js" afterPath="$PROJECT_DIR$/js/libs/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coffee/controllers/date_controller.coffee" afterPath="$PROJECT_DIR$/coffee/controllers/date_controller.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/date_controller.js" afterPath="$PROJECT_DIR$/js/controllers/date_controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/daysHighliter.css" afterPath="$PROJECT_DIR$/css/daysHighliter.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coffee/router.coffee" afterPath="$PROJECT_DIR$/coffee/router.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/router.js" afterPath="$PROJECT_DIR$/js/router.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Calendar.iws" />
@@ -33,28 +34,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="61" selection-start="398" selection-end="398" vertical-scroll-proportion="0.11161731" vertical-offset="67" max-vertical-offset="945">
+            <state line="15" column="38" selection-start="566" selection-end="566" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="1020">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/coffee/application.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="2" selection-start="64" selection-end="64" vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="135">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="date_controller.coffee" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="date_controller.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/coffee/controllers/date_controller.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="39" selection-start="172" selection-end="172" vertical-scroll-proportion="-1.8" vertical-offset="0" max-vertical-offset="1125">
+            <state line="62" column="0" selection-start="1797" selection-end="1797" vertical-scroll-proportion="0.14481185" vertical-offset="803" max-vertical-offset="1680">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="daysHighliter.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/daysHighliter.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="23" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
               <folding />
             </state>
           </provider>
@@ -92,12 +93,15 @@
         <option value="$PROJECT_DIR$/js/helpers/dateClassExtend.js" />
         <option value="$PROJECT_DIR$/coffee/helpers/ArrayClassExtend.coffee" />
         <option value="$PROJECT_DIR$/js/controllers/calendar_controller.js" />
-        <option value="$PROJECT_DIR$/css/daysHighliter.css" />
         <option value="$PROJECT_DIR$/js/router.js" />
         <option value="$PROJECT_DIR$/coffee/application.coffee" />
         <option value="$PROJECT_DIR$/coffee/controllers/calendar_controller.coffee" />
-        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/helpers/linkToHelper.js" />
+        <option value="$PROJECT_DIR$/coffee/helpers/linkToHelper.coffee" />
         <option value="$PROJECT_DIR$/coffee/router.coffee" />
+        <option value="$PROJECT_DIR$/coffee/helpers/getTodayDate.coffee" />
+        <option value="$PROJECT_DIR$/css/daysHighliter.css" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/coffee/controllers/date_controller.coffee" />
       </list>
     </option>
@@ -134,34 +138,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Default">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Calendar">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="coffee/controllers">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Calendar">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -181,6 +157,56 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Calendar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Calendar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Calendar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Calendar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Calendar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Calendar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Calendar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -250,12 +276,40 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Default">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Calendar">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="coffee/controllers">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Calendar">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="reference.idesettings.emmet" />
+    <property name="options.lastSelected" value="vcs.Subversion" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/js/libs/jquery-2.0.3.js" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -308,6 +362,7 @@
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
     <option name="FORCE_UPDATE" value="false" />
     <option name="IGNORE_EXTERNALS" value="false" />
+    <configuration useDefault="true">$USER_HOME$/.subversion</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="TaskManager">
@@ -316,6 +371,11 @@
       <created>1382179338471</created>
       <updated>1382179338471</updated>
     </task>
+    <task id="LOCAL-00001" summary="test commit">
+      <created>1382441764994</created>
+      <updated>1382441764994</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -326,7 +386,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18125" sideWeight="0.6825726" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -336,6 +396,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3174274" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -348,30 +409,13 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="test commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="test commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="43" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="990">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="0" selection-start="747" selection-end="747" vertical-scroll-proportion="0.0" vertical-offset="885" max-vertical-offset="102180">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/libs/ember.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="124" selection-end="124" vertical-scroll-proportion="0.15185602" vertical-offset="0" max-vertical-offset="547140" />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.WebStorm7/system/extLibs/http_code.jquery.com_jquery-2.0.0.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="131415" />
@@ -379,9 +423,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="1" selection-start="874" selection-end="874" vertical-scroll-proportion="0.23622048" vertical-offset="885" max-vertical-offset="102180">
-          <folding />
-        </state>
+        <state line="73" column="1" selection-start="874" selection-end="874" vertical-scroll-proportion="0.23622048" vertical-offset="885" max-vertical-offset="102180" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/helpers/dateClassExtend.js">
@@ -404,16 +446,21 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5835" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/daysHighliter.css">
+    <entry file="file://$PROJECT_DIR$/js/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="11" selection-start="11" selection-end="11" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+        <state line="41" column="0" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.6674058" vertical-offset="13" max-vertical-offset="915" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/StartEmberCoffee/coffee/controllers/todos_controller.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="7" selection-start="308" selection-end="308" vertical-scroll-proportion="0.17103763" vertical-offset="0" max-vertical-offset="877">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/router.js">
+    <entry file="file://$PROJECT_DIR$/js/controllers/date_controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.6674058" vertical-offset="13" max-vertical-offset="915">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
           <folding />
         </state>
       </provider>
@@ -432,16 +479,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coffee/controllers/date_controller.coffee">
+    <entry file="file://$PROJECT_DIR$/coffee/helpers/getTodayDate.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="39" selection-start="172" selection-end="172" vertical-scroll-proportion="-1.8" vertical-offset="0" max-vertical-offset="1125">
+        <state line="1" column="40" selection-start="107" selection-end="107" vertical-scroll-proportion="-0.6" vertical-offset="0" max-vertical-offset="120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/daysHighliter.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="23" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="61" selection-start="398" selection-end="398" vertical-scroll-proportion="0.11161731" vertical-offset="67" max-vertical-offset="945">
+        <state line="15" column="38" selection-start="566" selection-end="566" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffee/controllers/date_controller.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="0" selection-start="1797" selection-end="1797" vertical-scroll-proportion="0.14481185" vertical-offset="803" max-vertical-offset="1680">
           <folding />
         </state>
       </provider>

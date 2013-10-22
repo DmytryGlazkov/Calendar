@@ -12,3 +12,13 @@
 {
     color: orange;
 }
+
+.table td
+{
+    text-align: center;
+}
+
+.dayOfMonth
+{
+    cursor: ;
+}
