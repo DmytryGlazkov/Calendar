@@ -11,7 +11,7 @@
     <body>
         <script type="text/x-handlebars" data-template-name="date">
 
-            <div class="container">
+            <div class="container" style="text-align: center;">
                 <div>
                     {{getCurrentDate}}
                 </div>
@@ -31,7 +31,7 @@
                         <tr class="row">
 
                             {{#each day in week}}
-                                <td {{bind-attr class=day.dayClass}}><span {{bind-attr class=day.dayClass}} {{action "setSelection" day.dayNum}}>{{day.dayNum}}</a></a></td>
+                                <td class="btn" style="width: 50px;"{{bind-attr class=day.dayClass}}><span {{bind-attr class=day.dayClass}} {{action "setSelection" day.dayNum}}>{{day.dayNum}}</a></a></td>
                             {{/each}}
 
                         </tr>

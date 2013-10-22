@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af6d63ec-af51-4b63-bb77-19becc37ea78" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coffee/helpers/getTodayDate.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap.css" afterPath="$PROJECT_DIR$/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/libs/bootstrap.js" afterPath="$PROJECT_DIR$/js/libs/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/libs/bootstrap.min.js" afterPath="$PROJECT_DIR$/js/libs/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coffee/controllers/date_controller.coffee" afterPath="$PROJECT_DIR$/coffee/controllers/date_controller.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/date_controller.js" afterPath="$PROJECT_DIR$/js/controllers/date_controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/daysHighliter.css" afterPath="$PROJECT_DIR$/css/daysHighliter.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -34,19 +26,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="38" selection-start="566" selection-end="566" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="1020">
-              <folding />
+            <state line="13" column="61" selection-start="531" selection-end="531" vertical-scroll-proportion="0.17084283" vertical-offset="45" max-vertical-offset="1020">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#script#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#2;n#div#0;n#script#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="date_controller.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="date_controller.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/coffee/controllers/date_controller.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="0" selection-start="1797" selection-end="1797" vertical-scroll-proportion="0.14481185" vertical-offset="803" max-vertical-offset="1680">
+            <state line="66" column="20" selection-start="1950" selection-end="1950" vertical-scroll-proportion="-7.48" vertical-offset="803" max-vertical-offset="1680">
               <folding />
             </state>
           </provider>
@@ -101,8 +96,8 @@
         <option value="$PROJECT_DIR$/coffee/router.coffee" />
         <option value="$PROJECT_DIR$/coffee/helpers/getTodayDate.coffee" />
         <option value="$PROJECT_DIR$/css/daysHighliter.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/coffee/controllers/date_controller.coffee" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -493,17 +488,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/coffee/controllers/date_controller.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="38" selection-start="566" selection-end="566" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="1020">
+        <state line="66" column="20" selection-start="1950" selection-end="1950" vertical-scroll-proportion="-7.48" vertical-offset="803" max-vertical-offset="1680">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coffee/controllers/date_controller.coffee">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="0" selection-start="1797" selection-end="1797" vertical-scroll-proportion="0.14481185" vertical-offset="803" max-vertical-offset="1680">
-          <folding />
+        <state line="13" column="61" selection-start="531" selection-end="531" vertical-scroll-proportion="0.17084283" vertical-offset="45" max-vertical-offset="1020">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#script#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#2;n#div#0;n#script#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
