@@ -20,7 +20,14 @@
 
   Calendar.CalendarRoute = Ember.Route.extend();
 
-  Calendar.IndexRoute = Ember.Route.extend();
+  Calendar.CalendarIndexRoute = Ember.Route.extend({
+    model: function() {
+      return null;
+    },
+    enter: function() {
+      return this.transitionTo('date');
+    }
+  });
 
   Calendar.YearRoute = Ember.Route.extend({
     model: function(params) {

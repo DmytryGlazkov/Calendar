@@ -9,7 +9,11 @@ Calendar.Router.map ->
 
 Calendar.CalendarRoute = Ember.Route.extend()
 
-Calendar.IndexRoute = Ember.Route.extend()
+Calendar.CalendarIndexRoute = Ember.Route.extend
+  model: ->
+    null
+  enter: ->
+    @transitionTo('date')
 
 Calendar.YearRoute = Ember.Route.extend
   model: (params) ->

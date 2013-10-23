@@ -50,7 +50,6 @@
     },
     getDays: (function() {
       var currentDate, day, days, daysInMonth, daysInPrevMonth, endDay, i, nowDate, selectedDate, startDay, _i, _j, _k, _ref, _ref1;
-      console.log(this.get('selectedDay') + '/' + this.get('selectedMonth') + '/' + this.get('selectedYear'));
       nowDate = new Date();
       currentDate = new Date(this.get('currentYear'), this.get('currentMonth') - 1, this.get('currentDay'));
       selectedDate = new Date(this.get('selectedYear'), this.get('selectedMonth') - 1, this.get('selectedDay'));
