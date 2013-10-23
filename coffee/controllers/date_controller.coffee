@@ -3,6 +3,8 @@ Calendar.DateController = Ember.ObjectController.extend
   currentMonth: new Date().getMonth() + 1
   currentYear: new Date().getFullYear()
 
+  months = 'January February March April May June July August September October November December'.split(' ')
+
   actions:
     someAction: ->
       null
@@ -17,18 +19,28 @@ Calendar.DateController = Ember.ObjectController.extend
 
     prevMonth: ->
       @set('currentMonth', @get('currentMonth') - 1)
+      if @currentMonth < 1
+        @set 'currentMonth', 12
+        @set 'currentYear', @currentYear - 1
       null
 
     nextMonth: ->
       @set('currentMonth', @get('currentMonth') + 1)
+      if @currentMonth >12
+        @set 'currentMonth', 1
+        @set 'currentYear', @currentYear + 1
       null
 
     setSelection: (day)->
-      console.log day
-      @set 'selectedYear', @get 'currentYear'
-      @set 'selectedMonth', @get 'currentMonth'
-      @set 'selectedDay', day
-      @transitionToRoute('date', @get('selectedYear'), @get('selectedMonth'), day)
+      if not day.isDisabled
+        @set 'selectedYear', @get 'currentYear'
+        @set 'selectedMonth', @get 'currentMonth'
+        @set 'selectedDay', day.dayNum
+        @transitionToRoute('date', @get('selectedYear'), @get('selectedMonth'), day.dayNum)
+
+    gotoToday: ->
+      @set 'currentMonth', new Date().getMonth() + 1
+      @set 'currentYear', new Date().getFullYear()
 
 
   getDays: (->
@@ -55,6 +67,7 @@ Calendar.DateController = Ember.ObjectController.extend
       @checkDate(selectedDate, new Date(@get('currentYear'), @get('currentMonth') - 2, daysInPrevMonth - i), day, 'anotherDay')
 
       day.dayNum = daysInPrevMonth - i
+      day.isDisabled = true
       days.push(day)
 
 
@@ -64,6 +77,7 @@ Calendar.DateController = Ember.ObjectController.extend
       @checkDate(selectedDate, new Date(@get('currentYear'), @get('currentMonth') - 1, i), day, 'dayInMonth')
 
       day.dayNum = i
+      day.isDisabled = false
       days.push(day)
 
 
@@ -73,6 +87,7 @@ Calendar.DateController = Ember.ObjectController.extend
       @checkDate(selectedDate, new Date(@get('currentYear'), @get('currentMonth'), i), day, 'anotherDay')
 
       day.dayNum = i
+      day.isDisabled = true
       days.push(day)
 
     [
@@ -90,18 +105,17 @@ Calendar.DateController = Ember.ObjectController.extend
     now = new Date()
     nowDate = new Date(now.getFullYear(), now.getMonth(), now.getDate())
     if current.getTime() == nowDate.getTime()
-    then day.dayClass = 'now'
+    then day.dayClass = 'btn-info'
     else
       if current.getTime() == selected.getTime()
-      then day.dayClass = 'selected'
+      then day.dayClass = 'btn-warning'
       else
         day.dayClass = defaultClass
 
   getTodayDate: (->
-    return new Date().toLocaleDateString()
-  )
+    return "to #{months[new Date().getMonth()]}, #{new Date().getFullYear()}"
+  ).property('currentYear')
 
   getCurrentDate: (->
-    console.log new Date(@get('currentYear'), @get('currentMonth'), @get('currentDay')).toLocaleDateString()
-    return new Date(@get('currentYear'), @get('currentMonth'), @get('currentDay')).toLocaleDateString()
+    return "#{months[@currentMonth - 1]}, #{@currentYear}"
   ).property('currentYear', 'currentMonth', 'currentDay')
