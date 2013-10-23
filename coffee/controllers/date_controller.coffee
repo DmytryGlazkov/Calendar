@@ -44,8 +44,6 @@ Calendar.DateController = Ember.ObjectController.extend
 
 
   getDays: (->
-    console.log @get('selectedDay') + '/' + @get('selectedMonth') + '/' + @get('selectedYear')
-
     nowDate = new Date()
 
     currentDate = new Date(@get('currentYear'), @get('currentMonth') - 1, @get('currentDay'))
